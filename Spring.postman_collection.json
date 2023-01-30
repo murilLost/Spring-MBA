@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "44f8297c-57fd-474b-897b-b279e5f59e3b",
+		"name": "Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post cadastro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Manaus\",\r\n    \"airport\": \"MAO\",\r\n    \"country\": \"Brasil\",\r\n    \"description\": \"Visitar a floresta amazônica\",\r\n    \"price\": 2000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/destinations",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"destinations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put atualizacao",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Manaus\",\r\n    \"airport\": \"MAO\",\r\n    \"country\": \"Brasil\",\r\n    \"description\": \"Visitar a floresta amazônica!!!\",\r\n    \"price\": 2300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/destinations/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"destinations",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get listar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/destinations",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"destinations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get consulta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/destinations/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"destinations",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch att preco",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": 3000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/destinations/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"destinations",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8083/destinations/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"destinations",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actuator/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8083/actuator/health",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
