@@ -1,0 +1,29 @@
+server:
+  port: 8083
+  debug: false
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+spring:
+  datasource:
+    url: jdbc:h2:~/fiaptraveldb;DB_CLOSE_ON_EXIT=FALSE
+    username: fiap
+    password: fiap
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  security:
+    user:
+      name: usuario
+      password: senha
+      roles: USER
+
+jwt:
+  secret: s3cr37F14Ps3cr37F14Ps3cr37F14Ps3cr37F14Ps3cr37F14Ps3cr37F14Ps3cr37F14Ps3cr37F14P
+  expirationInSeconds: 60
